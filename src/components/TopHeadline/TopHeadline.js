@@ -1,7 +1,7 @@
+import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import {axios} from 'react';
 import News from '../News/News';
 
 const TopHeadline = () => {
@@ -10,7 +10,7 @@ const TopHeadline = () => {
     //     fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=e39dd6a850984a609a617cee981df236")
     //     .then(res => res.json())
     //     .then(data => setArticles(data.articles))
-    // }, []);
+    // }, [])
     useEffect(() => {
         const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=e39dd6a850984a609a617cee981df236";
         axios(url).then(data => setArticles(data.data.articles));
